@@ -1,0 +1,12 @@
+{
+  "name": "puppeteer-pdf",
+  "version": "1.0.0",
+  "description": "convert HTML to a PDF!",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.477.0",
+    "chrome-aws-lambda": "1.11.1",
+    "puppeteer-core": "1.11.0"
+  }
+}

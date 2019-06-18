@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Screenshot as a service</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <style>
+
+      body {
+        font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+        margin: 20px;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+      a {
+        cursor: pointer;
+        color: #0076FF;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        border-bottom: 1px solid white;
+      }
+
+      a:hover {
+        border-bottom: 1px solid #0076FF;
+      }
+
+      ul {
+        padding: 0;
+        list-style-type: none;
+        margin-left: 15px;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      li:before {
+        content: '–';
+        display: inline-block;
+        color: #999;
+        position: absolute;
+        margin-left: -15px;
+        transition: color 0.2s ease;
+      }
+    </style>
+    <body>
+        <div class="container">
+          <div class="wrapper">
+            <h1>Send a POST request with html with params </h1>
+            https://serverless-pdf.yourname.now.sh/upload?name=hello&type=A4
+            <p>The body might look something like this:</p>
+            <pre>
+              { html: &quot;&lt;span style=&quot;background: yellow;&quot;&gt;span tag with style attribute&lt;/span&gt;&quot; } </pre>
+              The return values will be a url
+            <pre>
+              { url: https://s3.us-west-2.amazonaws.com/pdf-bucket/pdfs/hello.pdf } </pre>
+              <p>And it'll look something like this:</p>
+              <img src="public/span_with_style_pdf.jpg" alt="" width="100%"/>
+              <hr>
+              <p>You can have a more complex PDF with images and styles like this! 🔥</p>
+              <p>if you want the html for this invoice, check it out here</p>
+              <img src="public/complex_pdf.jpg" alt="" width="100%"/>
+          </div>
+        </div>
+    </body>
+
+</html>
