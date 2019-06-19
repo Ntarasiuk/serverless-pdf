@@ -1,10 +1,9 @@
 const { parse } = require("url");
 const { getPdf } = require("./chromium");
-const AWS = require("aws-sdk");
 
 module.exports = async function(req, res) {
   try {
-    const { pathname = "/", query = {} } = parse(req.url, true);
+    const { query = {} } = parse(req.url, true);
     const { type = "A4", name = "output" } = query;
     if (!req.body || !req.body.html) {
       res.statusCode = 400;
